@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nayak Studios — Ideas That Become Stories</title>
+
+<meta name="description" content="Nayak Studios creates original movie stories, web-series concepts, characters, worlds and custom creative ideas for filmmakers worldwide.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#080808;
+    color:#ffffff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1150px;
+    margin:auto;
+}
+
+/* HEADER */
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(8,8,8,0.94);
+    border-bottom:1px solid #242424;
+    backdrop-filter:blur(12px);
+}
+
+.nav{
+    min-height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#d6a84f;
+}
+
+nav{
+    display:flex;
+    gap:22px;
+}
+
+nav a{
+    font-size:14px;
+    color:#d2d2d2;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#d6a84f;
+}
+
+/* HERO */
+.hero{
+    min-height:88vh;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at 50% 35%, #272015 0%, #11100e 28%, #080808 65%);
+}
+
+.hero-content{
+    width:100%;
+    padding:80px 0;
+}
+
+.tag{
+    display:inline-block;
+    border:1px solid #5b4a2a;
+    color:#d6a84f;
+    padding:7px 16px;
+    border-radius:30px;
+    font-size:12px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:clamp(45px,9vw,88px);
+    line-height:1;
+    letter-spacing:-3px;
+    margin-bottom:22px;
+}
+
+.hero h1 span{
+    color:#d6a84f;
+}
+
+.hero p{
+    max-width:700px;
+    margin:0 auto 35px;
+    color:#bcbcbc;
+    font-size:18px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:14px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:5px;
+    font-weight:bold;
+    font-size:14px;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#d6a84f;
+    color:#080808;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    border:1px solid #555;
+    color:#fff;
+}
+
+.btn-outline:hover{
+    border-color:#d6a84f;
+    color:#d6a84f;
+}
+
+/* SECTIONS */
+section{
+    padding:85px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title .small{
+    color:#d6a84f;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.section-title h2{
+    font-size:38px;
+    margin-top:10px;
+}
+
+.section-title p{
+    max-width:650px;
+    margin:12px auto 0;
+    color:#999;
+}
+
+/* STORIES */
+.stories{
+    background:#0d0d0d;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:#151515;
+    border:1px solid #292929;
+    padding:28px;
+    min-height:260px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    border-color:#6a552c;
+}
+
+.card-number{
+    color:#d6a84f;
+    font-size:12px;
+    letter-spacing:2px;
+    margin-bottom:35px;
+}
+
+.card h3{
+    font-size:23px;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#999;
+    font-size:14px;
+}
+
+.card .status{
+    display:inline-block;
+    margin-top:22px;
+    font-size:11px;
+    color:#d6a84f;
+    border:1px solid #554522;
+    padding:5px 9px;
+    border-radius:20px;
+}
+
+/* CREATE */
+.create-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.create-box{
+    padding:28px 20px;
+    background:#111;
+    border:1px solid #292929;
+    border-radius:7px;
+}
+
+.create-box .icon{
+    font-size:30px;
+    margin-bottom:18px;
+}
+
+.create-box h3{
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.create-box p{
+    color:#999;
+    font-size:13px;
+}
+
+/* FIND YOUR STORY */
+.find{
+    background:#0d0d0d;
+}
+
+.find-box{
+    max-width:900px;
+    margin:auto;
+    padding:45px 30px;
+    border:1px solid #302817;
+    background:#12110f;
+    border-radius:10px;
+    text-align:center;
+}
+
+.find-box h3{
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.find-box p{
+    color:#999;
+    margin-bottom:28px;
+}
+
+.genres{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:30px;
+}
+
+.genre{
+    border:1px solid #3b3b3b;
+    padding:8px 14px;
+    border-radius:25px;
+    font-size:13px;
+    color:#ccc;
+}
+
+/* WORK */
+.work{
+    text-align:center;
+}
+
+.work-content{
+    max-width:750px;
+    margin:auto;
+}
+
+.work-content p{
+    color:#aaa;
+    margin:15px 0 28px;
+}
+
+/* ABOUT */
+.about{
+    background:#0d0d0d;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about h2{
+    font-size:38px;
+    margin-bottom:18px;
+}
+
+.about p{
+    color:#999;
+    margin-bottom:15px;
+}
+
+.about-highlight{
+    border-left:2px solid #d6a84f;
+    padding-left:20px;
+    color:#ddd;
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+}
+
+.contact-box{
+    max-width:750px;
+    margin:auto;
+}
+
+.contact-box p{
+    color:#999;
+    margin:15px 0 28px;
+}
+
+/* FOOTER */
+footer{
+    border-top:1px solid #242424;
+    padding:35px 0;
+    background:#050505;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.footer-logo{
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.footer-links{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.footer-links a{
+    color:#888;
+    font-size:12px;
+}
+
+.footer-bottom{
+    margin-top:25px;
+    padding-top:20px;
+    border-top:1px solid #1e1e1e;
+    color:#666;
+    font-size:12px;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        min-height:82vh;
+    }
+
+    .hero h1{
+        letter-spacing:-2px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    section{
+        padding:65px 0;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .create-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+}
+
+@media(max-width:480px){
+
+    .create-grid{
+        grid-template-columns:1fr;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .hero-content{
+        padding:60px 0;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .find-box{
+        padding:30px 18px;
+    }
+}
+    /* STORY REQUEST FORM */
+
+.find-box form{
+    max-width:650px;
+    margin:0 auto;
+    text-align:left;
+}
+
+.find-box label{
+    display:block;
+    color:#ddd;
+    font-size:14px;
+    font-weight:bold;
+    margin:22px 0 8px;
+}
+
+.find-box input,
+.find-box select,
+.find-box textarea{
+    width:100%;
+    padding:14px;
+    background:#0b0b0b;
+    color:#fff;
+    border:1px solid #444;
+    border-radius:5px;
+    font-size:14px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.find-box select{
+    appearance:auto;
+}
+
+.find-box input::placeholder,
+.find-box textarea::placeholder{
+    color:#777;
+}
+
+.find-box input:focus,
+.find-box select:focus,
+.find-box textarea:focus{
+    outline:none;
+    border-color:#d6a84f;
+}
+
+.find-box textarea{
+    resize:vertical;
+    min-height:150px;
+}
+
+.find-box button{
+    width:100%;
+    border:none;
+    cursor:pointer;
+    margin-top:28px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+<div class="container nav">
+
+    <a href="#home" class="logo">
+        NAYAK <span>STUDIOS</span>
+    </a>
+
+    <nav>
+        <a href="#stories">Stories</a>
+        <a href="#create">What We Create</a>
+        <a href="#find">Find Your Story</a>
+        <a href="#work">Work With Me</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="container hero-content">
+
+    <div class="tag">Original Stories • Creative Worlds • Global</div>
+
+    <h1>
+        Ideas That<br>
+        <span>Become Stories.</span>
+    </h1>
+
+    <p>
+        Original movie stories, web-series concepts, characters
+        and creative ideas created for filmmakers and storytellers worldwide.
+    </p>
+
+    <div class="buttons">
+        <a href="#stories" class="btn btn-primary">Explore Stories</a>
+        <a href="#find" class="btn btn-outline">Find Your Story</a>
+        <a href="#work" class="btn btn-outline">Work With Me</a>
+    </div>
+
+</div>
+</section>
+
+
+<!-- FEATURED STORIES -->
+<section class="stories" id="stories">
+
+<div class="container">
+
+    <div class="section-title">
+        <div class="small">Featured</div>
+        <h2>Stories With Potential</h2>
+        <p>
+            Explore original concepts created for cinema, streaming
+            and future storytelling.
+        </p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-number">01 / MOVIE</div>
+            <h3>Coming Soon</h3>
+            <p>
+                An original cinematic concept currently being developed
+                by Nayak Studios.
+            </p>
+            <span class="status">COMING SOON</span>
+        </div>
+
+        <div class="card">
+            <div class="card-number">02 / SERIES</div>
+            <h3>Coming Soon</h3>
+            <p>
+                A future web-series concept built for an audience
+                looking for something different.
+            </p>
+            <span class="status">COMING SOON</span>
+        </div>
+
+        <div class="card">
+            <div class="card-number">03 / PREMIUM</div>
+            <h3>Private Concepts</h3>
+            <p>
+                Selected premium concepts are kept private and
+                discussed directly with serious collaborators.
+            </p>
+            <span class="status">PRIVATE</span>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- WHAT WE CREATE -->
+<section id="create">
+
+<div class="container">
+
+    <div class="section-title">
+        <div class="small">Our Creative Work</div>
+        <h2>What We Create</h2>
+        <p>
+            From one powerful idea to an entire fictional universe.
+        </p>
+    </div>
+
+    <div class="create-grid">
+
+        <div class="create-box">
+            <div class="icon">🎬</div>
+            <h3>Movie Stories</h3>
+            <p>Original stories and concepts for feature films.</p>
+        </div>
+
+        <div class="create-box">
+            <div class="icon">📺</div>
+            <h3>Web-Series</h3>
+            <p>Series concepts designed for long-form storytelling.</p>
+        </div>
+
+        <div class="create-box">
+            <div class="icon">👤</div>
+            <h3>Characters & Worlds</h3>
+            <p>Memorable characters, villains and fictional worlds.</p>
+        </div>
+
+        <div class="create-box">
+            <div class="icon">💡</div>
+            <h3>Custom Ideas</h3>
+            <p>Creative concepts developed around your project.</p>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- FIND YOUR STORY -->
+<!-- FIND YOUR STORY -->
+<section class="find" id="find">
+
+<div class="container">
+
+    <div class="section-title">
+        <div class="small">For Filmmakers</div>
+        <h2>Find Your Story</h2>
+        <p>
+            Tell us what kind of creative content you are looking for.
+            Share your project requirements and we will contact you.
+        </p>
+    </div>
+
+    <div class="find-box">
+
+        
+<form action="https://formsubmit.co/pappunayak331471@gmail.com method="POST">
+    <input type="hidden" name="_subject" value="New Nayak Studios Story Request">
+<input type="hidden" name="_template" value="table">
+            <label>What do you need?</label>
+
+            <select required>
+                <option value="">Select an option</option>
+                <option>Full Movie Story</option>
+                <option>Web-Series Story</option>
+                <option>Movie Concept</option>
+                <option>Character Creation</option>
+                <option>Villain Creation</option>
+                <option>World / Universe Creation</option>
+                <option>Custom Story</option>
+                <option>Story Development</option>
+                <option>Other Creative Content</option>
+            </select>
+
+
+            <label>What genre are you interested in?</label>
+
+            <select required>
+                <option value="">Select a genre</option>
+                <option>Action</option>
+                <option>Love / Romance</option>
+                <option>Horror</option>
+                <option>Comedy</option>
+                <option>Superhero</option>
+                <option>Sci-Fi</option>
+                <option>Adventure</option>
+                <option>Mystery</option>
+                <option>Thriller</option>
+                <option>Drama</option>
+                <option>Fantasy</option>
+                <option>Crime</option>
+                <option>Survival</option>
+                <option>Psychological</option>
+                <option>Other</option>
+            </select>
+
+
+            <label>Your Name</label>
+
+            <input
+                type="text"
+                placeholder="Enter your name"
+                required
+            >
+
+
+            <label>Your Email</label>
+
+            <input
+                type="email"
+                placeholder="Enter your email"
+                required
+            >
+
+
+            <label>Country</label>
+
+            <input
+                type="text"
+                placeholder="Enter your country"
+                required
+            >
+
+
+            <label>Budget (Optional)</label>
+
+            <input
+                type="text"
+                placeholder="Example: $500 - $2,000"
+            >
+
+
+            <label>Tell us about your project</label>
+
+            <textarea
+                rows="6"
+                placeholder="Describe your project, story requirements or creative idea..."
+                required
+            ></textarea>
+
+
+            <button type="submit" class="btn btn-primary">
+                Send Story Request
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- WORK WITH ME -->
+<section id="work">
+
+<div class="container">
+
+    <div class="work-content">
+
+        <div class="section-title">
+            <div class="small">Collaboration</div>
+            <h2>Work With Nayak Studios</h2>
+        </div>
+
+        <p>
+            Are you a filmmaker, producer, writer or creative professional
+            looking for an original story or concept?
+        </p>
+
+        <p>
+            Share your project requirements with us. We will discuss
+            the idea, scope, pricing and delivery directly with you.
+        </p>
+
+        <a href="#contact" class="btn btn-primary">
+            Start a Conversation
+        </a>
+
+    </div>
+
+</div>
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+<div class="container about-grid">
+
+    <div>
+        <div class="section-title" style="text-align:left;margin-bottom:20px;">
+            <div class="small">About</div>
+            <h2>Nayak Studios</h2>
+        </div>
+
+        <p>
+            Nayak Studios is an independent creative studio focused on
+            original storytelling and imaginative ideas.
+        </p>
+
+        <p>
+            The goal is simple: create stories that can travel beyond
+            borders and connect with audiences anywhere in the world.
+        </p>
+    </div>
+
+    <div class="about-highlight">
+        <p>
+            “Every great film begins with an idea.
+            We create the ideas worth bringing to life.”
+        </p>
+    </div>
+
+</div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+<div class="container contact-box">
+
+    <div class="section-title">
+        <div class="small">Let's Create</div>
+        <h2>Have a Story in Mind?</h2>
+        <p>
+            Tell us about your project and what you are looking for.
+            We will get back to you by email.
+        </p>
+    </div>
+
+    <!-- EMAIL WILL BE ADDED LATER -->
+    <a href="mailto:YOUR-EMAIL@example.com" class="btn btn-primary">
+        Contact Nayak Studios
+    </a>
+
+</div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+<div class="container">
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+            NAYAK STUDIOS
+        </div>
+
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#stories">Stories</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Nayak Studios. All rights reserved.
+    </div>
+
+</
